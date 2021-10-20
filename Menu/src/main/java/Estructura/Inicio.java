@@ -7,7 +7,9 @@ public class Inicio {
     public void menu(){
         int largo = 25;
         //primer vistaso a posible menú de plantas
+        //clase scanner
         Scanner tec = new Scanner(System.in);
+        //llamado a clase Stock
         Stock stocks = new Stock(largo);
         Plantas p1 = new Plantas("Rosa", "tipo a", "esto pincha", 26485);
         Plantas p2 = new Plantas("Cerezo", "tipo b", "ta lindo", 34857);
