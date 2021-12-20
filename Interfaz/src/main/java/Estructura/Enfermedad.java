@@ -2,7 +2,7 @@ package Estructura;
 
 import java.util.Scanner;
 
-public class Menu {
+public class Enfermedad {
 
     public void menu(){
         int largo = 25;
