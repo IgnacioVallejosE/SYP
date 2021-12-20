@@ -7,6 +7,14 @@ import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+/**
+ * Clase que genera una conección con base de datos a través de api php, método GET que llama los datos de la base y método POST que agrega datos a la base.
+ * @autor Diego Medina
+ * @author Ninoska Diaz
+ * @author Manlet Sanchez
+ * @author Ignacio Vallejos
+ * @version 1.0
+ */
 public class MySQL {
     //public static void main(String[] args) throws IOException {
         //pasamos el id si queremos recibir una request en especifico o 0 para todas

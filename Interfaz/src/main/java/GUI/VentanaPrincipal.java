@@ -3,6 +3,15 @@ package GUI;
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * Clases {conjunto Ventanas} destinadas a mostrar gráficamente las distintas funciones del proyecto
+ * @autor Diego Medina
+ * @author Ninoska Diaz
+ * @author Manlet Sanchez
+ * @author Ignacio Vallejos
+ * @version 1.0
+ */
+
 public class VentanaPrincipal extends JFrame {
     private JPanel panel1;
     private JButton respondeTusDudasAquíButton;

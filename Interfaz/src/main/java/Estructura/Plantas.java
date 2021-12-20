@@ -1,5 +1,14 @@
 package Estructura;
 
+/**
+ * Clase objeto que almacenaria los datos extraídos de la base de datos traída por MySQL
+ * @autor Diego Medina
+ * @author Ninoska Diaz
+ * @author Manlet Sanchez
+ * @author Ignacio Vallejos
+ * @version 1.0
+ */
+
 public class Plantas {
     public String nombre;
     public String tipo;
@@ -13,7 +22,6 @@ public class Plantas {
         this.codigo_id = codigo_id;
     }
         public String getNombre () {
-
             return nombre;
         }
 
