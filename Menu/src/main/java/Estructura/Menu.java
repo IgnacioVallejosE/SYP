@@ -2,19 +2,17 @@ package Estructura;
 
 import java.util.Scanner;
 
-public class Inicio {
+public class Menu {
 
     public void menu(){
         int largo = 25;
         //primer vistaso a posible menú de plantas
-        //clase scanner
         Scanner tec = new Scanner(System.in);
-        //llamado a clase Stock
         Stock stocks = new Stock(largo);
-        Plantas p1 = new Plantas("Rosa", "tipo a", "esto pincha", 26485);
-        Plantas p2 = new Plantas("Cerezo", "tipo b", "ta lindo", 34857);
-        stocks.push(p1);
-        stocks.push(p2);
+        //Plantas p1 = new Plantas("Rosa", "tipo a", "esto pincha", 26485);
+        //Plantas p2 = new Plantas("Cerezo", "tipo b", "ta lindo", 34857);
+        //stocks.push(p1);
+        //stocks.push(p2);
         System.out.println("1 insertar plantas");
         System.out.println("2 revisar plantas");
         System.out.println("4 revisar planta especifica");

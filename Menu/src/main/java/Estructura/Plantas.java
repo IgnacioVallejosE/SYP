@@ -13,6 +13,7 @@ public class Plantas {
         this.codigo_id = codigo_id;
     }
         public String getNombre () {
+
             return nombre;
         }
 
