@@ -91,4 +91,5 @@ public class VentanaBiblio extends JFrame {
     public JComponent $$$getRootComponent$$$() {
         return panel1;
     }
+
 }

@@ -9,7 +9,7 @@ import java.net.URL;
 
 /**
  * Clase que genera una conección con base de datos a través de api php, método GET que llama los datos de la base y método POST que agrega datos a la base.
- * @autor Diego Medina
+ * @author Diego Medina
  * @author Ninoska Diaz
  * @author Manlet Sanchez
  * @author Ignacio Vallejos

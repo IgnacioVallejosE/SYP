@@ -1,0 +1,19 @@
+{
+    
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch request_api",
+            "request": "launch",
+            "mainClass": "request_api",
+            "projectName": "apinacho_82c2df98"
+        }
+    ]
+}

@@ -5,7 +5,7 @@ import java.awt.*;
 
 /**
  * Clases {conjunto Ventanas} destinadas a mostrar gráficamente las distintas funciones del proyecto
- * @autor Diego Medina
+ * @author Diego Medina
  * @author Ninoska Diaz
  * @author Manlet Sanchez
  * @author Ignacio Vallejos

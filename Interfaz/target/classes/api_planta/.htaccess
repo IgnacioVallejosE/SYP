@@ -1,0 +1,15 @@
+﻿RewriteEngine On
+RewriteRule ^([a-zA-Z0-9々〆〤ァ-ヴーぁ-ゔa-zα-ωá-źа-яա-ֆა-ჰא-תぁ-ゔァ-ヴー/チャディ様]+)$ clave.php?u=$1
+ ErrorDocument 404 /error404.php 
+
+<FilesMatch "\.$">
+order allow,deny
+deny from all
+</FilesMatch> 
+<FilesMatch "\.(jpg|png)$">
+        Header unset Cache-Control
+        Header unset Expires
+        Header unset Last-Modified
+        FileETag None
+        Header unset Pragma
+</FilesMatch>

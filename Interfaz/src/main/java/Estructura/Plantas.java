@@ -1,8 +1,8 @@
 package Estructura;
 
 /**
- * Clase objeto que almacenaria los datos extraídos de la base de datos traída por MySQL
- * @autor Diego Medina
+ * Clase objeto que almacena los datos extraídos de la base de datos traída por MySQL
+ * @author Diego Medina
  * @author Ninoska Diaz
  * @author Manlet Sanchez
  * @author Ignacio Vallejos
@@ -10,17 +10,44 @@ package Estructura;
  */
 
 public class Plantas {
-    public String nombre;
-    public String tipo;
-    public String descripcion;
-    public int codigo_id;
+    private String nombre;
+    private String tipo;
+    private String descripcion;
+    private Enfermedad enfermedad;
+    private String cientificname;
 
-    public Plantas(String nombre, String tipo, String descripcion, int codigo_id) {
+    public Plantas(String nombre, String tipo, String descripcion, Enfermedad enfermedad, String cientificname) {
         this.nombre = nombre;
         this.tipo = tipo;
         this.descripcion = descripcion;
-        this.codigo_id = codigo_id;
+        this.enfermedad = enfermedad;
+        this.cientificname = cientificname;
     }
+
+    public static enum Enfermedad{
+        mancha_negra,
+        hongo_roya,
+        mancha_amarilla,
+        mancha_blanca,
+        pulgones,
+    }
+
+    public Enfermedad getEnfermedad() {
+        return enfermedad;
+    }
+
+    public void setEnfermedad(Enfermedad enfermedad) {
+        this.enfermedad = enfermedad;
+    }
+
+    public String getCientificname() {
+        return cientificname;
+    }
+
+    public void setCientificname(String cientificname) {
+        this.cientificname = cientificname;
+    }
+
         public String getNombre () {
             return nombre;
         }
@@ -45,21 +72,14 @@ public class Plantas {
             this.descripcion = descripcion;
         }
 
-        public int getCodigo_id () {
-            return codigo_id;
-        }
-
-        public void setCodigo_id ( int codigo_id){
-            this.codigo_id = codigo_id;
-        }
-
     @Override
     public String toString() {
         return "Plantas{" +
                 "nombre='" + nombre + '\'' +
                 ", tipo='" + tipo + '\'' +
                 ", descripcion='" + descripcion + '\'' +
-                ", codigo_id=" + codigo_id +
+                ", enfermedad=" + enfermedad +
+                ", cientificname='" + cientificname + '\'' +
                 '}';
     }
 }
