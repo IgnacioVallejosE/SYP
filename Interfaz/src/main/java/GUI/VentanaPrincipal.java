@@ -1,7 +1,5 @@
 package GUI;
 
-import ContenidoExterno.GestorVentana;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -21,18 +19,15 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
     private JPanel panel1;
     private JButton respondeTusDudasAquíButton;
     private JButton bibliografíaButton;
-    private GestorVentana gestorVentana;
 
 
     public VentanaPrincipal() {
-        //setContentPane(new VentanaPrincipal().panel1);
         this.add(panel1);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         pack();
         AñadirButton();
         setVisible(true);
-
-
+        setResizable(false);
     }
 
     public void AñadirButton() {
@@ -43,8 +38,12 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == respondeTusDudasAquíButton) {
+            this.dispose();
             VentanaPreguntas vp = new VentanaPreguntas();
-            this.setVisible(true);
+        }
+        if (e.getSource() == bibliografíaButton) {
+            this.dispose();
+            VentanaBiblio vb = new VentanaBiblio();
         }
 
     }

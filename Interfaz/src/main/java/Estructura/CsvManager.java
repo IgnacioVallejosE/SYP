@@ -40,13 +40,13 @@ public class CsvManager {
      * @param file
      * @return
      */
-    public static ArrayList<Plantas> readFileToContacts(File file){
-        ArrayList<Plantas> contacts = new ArrayList<>();
+    public static ArrayList<Planta> readFileToContacts(File file){
+        ArrayList<Planta> contacts = new ArrayList<>();
         try {
             Scanner myReader = new Scanner(file);
             while (myReader.hasNextLine()) {
                 String row = myReader.nextLine();
-                Plantas aux = CsvManager.parseRowToContact(row);
+                Planta aux = CsvManager.parseRowToContact(row);
                 contacts.add(aux);
             }
             myReader.close();
@@ -65,9 +65,9 @@ public class CsvManager {
      * @param row
      * @return
      */
-    private static Plantas parseRowToContact(String row){
+    private static Planta parseRowToContact(String row){
         String[] fields = row.split(";");
-        return new Plantas(
+        return new Planta(
                 fields[0],
                 fields[1],
                 fields[2],

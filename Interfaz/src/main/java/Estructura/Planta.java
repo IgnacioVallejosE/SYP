@@ -9,14 +9,14 @@ package Estructura;
  * @version 1.0
  */
 
-public class Plantas {
+public class Planta {
     private String nombre;
     private String tipo;
     private String descripcion;
     private Enfermedad enfermedad;
     private String cientificname;
 
-    public Plantas(String nombre, String tipo, String descripcion, Enfermedad enfermedad, String cientificname) {
+    public Planta(String nombre, String tipo, String descripcion, Enfermedad enfermedad, String cientificname) {
         this.nombre = nombre;
         this.tipo = tipo;
         this.descripcion = descripcion;

@@ -1,6 +1,6 @@
 package GUI;
 
-import Estructura.Plantas;
+import Estructura.Enfermedad;
 
 import javax.swing.*;
 import java.awt.*;
@@ -12,7 +12,8 @@ public class VentanaPreguntas extends JFrame implements ActionListener {
     private JButton blancasButton;
     private JButton amarillasButton;
     private JButton negrasButton;
-    private JButton noTieneManchasButton;
+    private JButton hongosButton;
+    private JButton bichosButton;
 
     public VentanaPreguntas() {
         this.add(panel1);
@@ -26,12 +27,32 @@ public class VentanaPreguntas extends JFrame implements ActionListener {
         blancasButton.addActionListener(this);
         amarillasButton.addActionListener(this);
         negrasButton.addActionListener(this);
-        noTieneManchasButton.addActionListener(this);
+        hongosButton.addActionListener(this);
+        bichosButton.addActionListener(this);
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-
+        if (e.getSource() == blancasButton) {
+            this.dispose();
+            VentanaRespuesta vr = new VentanaRespuesta(Enfermedad.MANCHA_BLANCA);
+        }
+        if (e.getSource() == amarillasButton) {
+            this.dispose();
+            VentanaRespuesta vr = new VentanaRespuesta(Enfermedad.MANCHA_AMARILLA);
+        }
+        if (e.getSource() == negrasButton) {
+            this.dispose();
+            VentanaRespuesta vr = new VentanaRespuesta(Enfermedad.MANCHA_NEGRA);
+        }
+        if (e.getSource() == hongosButton) {
+            this.dispose();
+            VentanaRespuesta vr = new VentanaRespuesta(Enfermedad.HONGO_ROYA);
+        }
+        if (e.getSource() == bichosButton) {
+            this.dispose();
+            VentanaRespuesta vr = new VentanaRespuesta(Enfermedad.PULGONES);
+        }
     }
 
 
@@ -51,10 +72,10 @@ public class VentanaPreguntas extends JFrame implements ActionListener {
      */
     private void $$$setupUI$$$() {
         panel1 = new JPanel();
-        panel1.setLayout(new com.intellij.uiDesigner.core.GridLayoutManager(14, 5, new Insets(0, 0, 0, 0), -1, -1));
+        panel1.setLayout(new com.intellij.uiDesigner.core.GridLayoutManager(16, 5, new Insets(0, 0, 0, 0), -1, -1));
         final JLabel label1 = new JLabel();
         label1.setText("");
-        panel1.add(label1, new com.intellij.uiDesigner.core.GridConstraints(12, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        panel1.add(label1, new com.intellij.uiDesigner.core.GridConstraints(14, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         final JLabel label2 = new JLabel();
         label2.setText("¿DE QUE COLOR SON LAS MANCHAS EN SUS HOJAS?");
         panel1.add(label2, new com.intellij.uiDesigner.core.GridConstraints(2, 0, 1, 2, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
@@ -70,14 +91,14 @@ public class VentanaPreguntas extends JFrame implements ActionListener {
         negrasButton.setBackground(new Color(-8348074));
         negrasButton.setText("Negras");
         panel1.add(negrasButton, new com.intellij.uiDesigner.core.GridConstraints(9, 0, 1, 5, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
-        noTieneManchasButton = new JButton();
-        noTieneManchasButton.setBackground(new Color(-8348074));
-        noTieneManchasButton.setText("No tiene manchas");
-        panel1.add(noTieneManchasButton, new com.intellij.uiDesigner.core.GridConstraints(11, 0, 1, 5, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        hongosButton = new JButton();
+        hongosButton.setBackground(new Color(-8348074));
+        hongosButton.setText("Hongos");
+        panel1.add(hongosButton, new com.intellij.uiDesigner.core.GridConstraints(11, 0, 1, 5, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         final JLabel label3 = new JLabel();
         label3.setIcon(new ImageIcon(getClass().getResource("/planta1.png")));
         label3.setText("");
-        panel1.add(label3, new com.intellij.uiDesigner.core.GridConstraints(12, 1, 2, 4, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_EAST, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        panel1.add(label3, new com.intellij.uiDesigner.core.GridConstraints(14, 1, 2, 4, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_EAST, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         final JSeparator separator1 = new JSeparator();
         panel1.add(separator1, new com.intellij.uiDesigner.core.GridConstraints(10, 1, 1, 4, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_BOTH, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, null, null, null, 0, false));
         final JSeparator separator2 = new JSeparator();
@@ -92,6 +113,12 @@ public class VentanaPreguntas extends JFrame implements ActionListener {
         panel1.add(separator4, new com.intellij.uiDesigner.core.GridConstraints(3, 1, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_BOTH, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, null, null, null, 0, false));
         final JToolBar.Separator toolBar$Separator3 = new JToolBar.Separator();
         panel1.add(toolBar$Separator3, new com.intellij.uiDesigner.core.GridConstraints(4, 1, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        bichosButton = new JButton();
+        bichosButton.setBackground(new Color(-8348074));
+        bichosButton.setText("Bichos");
+        panel1.add(bichosButton, new com.intellij.uiDesigner.core.GridConstraints(13, 0, 1, 5, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        final JSeparator separator5 = new JSeparator();
+        panel1.add(separator5, new com.intellij.uiDesigner.core.GridConstraints(12, 1, 1, 4, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_BOTH, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, null, null, null, 0, false));
     }
 
     /**
