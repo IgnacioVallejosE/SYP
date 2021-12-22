@@ -1,18 +1,44 @@
 package GUI;
 
+import Estructura.Enfermedad;
+
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class VentanaRespuesta extends JFrame {
+public class VentanaRespuesta extends JFrame implements ActionListener {
     private JPanel panel1;
-    private JButton LAMANCHAAMARILLAButton;
+    private JButton botonEnfermedad;
+    private Enfermedad enfermedad;
 
-    public static void main(String[] args) {
-        VentanaRespuesta miVentanaR = new VentanaRespuesta();
-        miVentanaR.setContentPane(new VentanaRespuesta().panel1);
-        miVentanaR.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        miVentanaR.pack();
-        miVentanaR.setVisible(true);
+    public VentanaRespuesta(Enfermedad enfermedad) {
+        this.enfermedad = enfermedad;
+        this.add(panel1);
+        switch (enfermedad) {
+            case MANCHA_BLANCA -> botonEnfermedad.setText("Mancha Blanca");
+            case MANCHA_AMARILLA -> botonEnfermedad.setText("Mancha Amarilla");
+            case MANCHA_NEGRA -> botonEnfermedad.setText("Mancha Negra");
+            case HONGO_ROYA -> botonEnfermedad.setText("Hongo Roya");
+            case PULGONES -> botonEnfermedad.setText("Pulgones");
+        }
+        añadirButton();
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        pack();
+        setVisible(true);
+        setLocationRelativeTo(null);
+    }
+
+    private void añadirButton() {
+        botonEnfermedad.addActionListener(this);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == botonEnfermedad) {
+            this.dispose();
+            VentanaSolucion vs = new VentanaSolucion(enfermedad);
+        }
     }
 
     {
@@ -47,11 +73,11 @@ public class VentanaRespuesta extends JFrame {
         label3.setIcon(new ImageIcon(getClass().getResource("/planta3.png")));
         label3.setText("");
         panel2.add(label3, new com.intellij.uiDesigner.core.GridConstraints(3, 0, 2, 3, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
-        LAMANCHAAMARILLAButton = new JButton();
-        LAMANCHAAMARILLAButton.setBackground(new Color(-38055));
-        LAMANCHAAMARILLAButton.setEnabled(true);
-        LAMANCHAAMARILLAButton.setText("LA MANCHA AMARILLA");
-        panel2.add(LAMANCHAAMARILLAButton, new com.intellij.uiDesigner.core.GridConstraints(1, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(100, 100), null, 0, false));
+        botonEnfermedad = new JButton();
+        botonEnfermedad.setBackground(new Color(-38055));
+        botonEnfermedad.setEnabled(true);
+        botonEnfermedad.setText("");
+        panel2.add(botonEnfermedad, new com.intellij.uiDesigner.core.GridConstraints(1, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(100, 100), null, 0, false));
     }
 
     /**
@@ -60,4 +86,6 @@ public class VentanaRespuesta extends JFrame {
     public JComponent $$$getRootComponent$$$() {
         return panel1;
     }
+
+
 }

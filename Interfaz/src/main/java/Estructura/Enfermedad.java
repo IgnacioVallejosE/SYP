@@ -1,5 +1,9 @@
 package Estructura;
 
-public class Enfermedad {
-
-}
+public enum Enfermedad {
+        MANCHA_NEGRA,
+        HONGO_ROYA,
+        MANCHA_AMARILLA,
+        MANCHA_BLANCA,
+        PULGONES,
+    }

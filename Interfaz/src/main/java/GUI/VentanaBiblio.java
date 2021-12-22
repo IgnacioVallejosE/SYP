@@ -6,12 +6,12 @@ import java.awt.*;
 public class VentanaBiblio extends JFrame {
     private JPanel panel1;
 
-    public static void main(String[] args) {
-        VentanaBiblio miVentanaB = new VentanaBiblio();
-        miVentanaB.setContentPane(new VentanaBiblio().panel1);
-        miVentanaB.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        miVentanaB.pack();
-        miVentanaB.setVisible(true);
+    public VentanaBiblio() {
+        this.add(panel1);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        pack();
+        setLocationRelativeTo(null);
+        setVisible(true);
     }
 
     {
@@ -91,4 +91,5 @@ public class VentanaBiblio extends JFrame {
     public JComponent $$$getRootComponent$$$() {
         return panel1;
     }
+
 }
