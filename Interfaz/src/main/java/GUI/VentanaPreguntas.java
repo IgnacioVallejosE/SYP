@@ -74,23 +74,24 @@ public class VentanaPreguntas extends JFrame implements ActionListener {
     private void $$$setupUI$$$() {
         panel1 = new JPanel();
         panel1.setLayout(new com.intellij.uiDesigner.core.GridLayoutManager(16, 5, new Insets(0, 0, 0, 0), -1, -1));
+        panel1.setBackground(new Color(-1));
         final JLabel label1 = new JLabel();
         label1.setText("");
         panel1.add(label1, new com.intellij.uiDesigner.core.GridConstraints(14, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         final JLabel label2 = new JLabel();
-        label2.setText("¿DE QUE COLOR SON LAS MANCHAS EN SUS HOJAS?");
+        label2.setText("¿QUÉ TIPO DE PROBLEMA PUEDE OBSERVAR EN SU PLANTA?");
         panel1.add(label2, new com.intellij.uiDesigner.core.GridConstraints(2, 0, 1, 2, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         blancasButton = new JButton();
         blancasButton.setBackground(new Color(-8348074));
-        blancasButton.setText("Blancas");
+        blancasButton.setText("Manchones Blancos");
         panel1.add(blancasButton, new com.intellij.uiDesigner.core.GridConstraints(5, 0, 1, 5, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         amarillasButton = new JButton();
         amarillasButton.setBackground(new Color(-8348074));
-        amarillasButton.setText("Amarillas");
+        amarillasButton.setText("Manchones Amarillos");
         panel1.add(amarillasButton, new com.intellij.uiDesigner.core.GridConstraints(7, 0, 1, 5, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         negrasButton = new JButton();
         negrasButton.setBackground(new Color(-8348074));
-        negrasButton.setText("Negras");
+        negrasButton.setText("Manchones Negros");
         panel1.add(negrasButton, new com.intellij.uiDesigner.core.GridConstraints(9, 0, 1, 5, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         hongosButton = new JButton();
         hongosButton.setBackground(new Color(-8348074));

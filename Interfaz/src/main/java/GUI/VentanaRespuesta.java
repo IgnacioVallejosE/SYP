@@ -36,6 +36,7 @@ public class VentanaRespuesta extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == botonEnfermedad) {
+            this.dispose();
             VentanaSolucion vs = new VentanaSolucion(enfermedad);
         }
     }

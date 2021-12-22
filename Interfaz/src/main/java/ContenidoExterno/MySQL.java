@@ -61,7 +61,6 @@ public class MySQL {
         postConnection.setRequestMethod("POST");
         postConnection.setRequestProperty("Content-Type", "application/json");
 
-
         postConnection.setDoOutput(true);
         OutputStream os = postConnection.getOutputStream();
         os.write(POST_PARAMS.getBytes());

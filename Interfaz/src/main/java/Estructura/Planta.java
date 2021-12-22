@@ -14,14 +14,14 @@ public class Planta {
     private String tipo;
     private String descripcion;
     private Enfermedad enfermedad;
-    private String cientificname;
+    private String tratamiento;
 
-    public Planta(String nombre, String tipo, String descripcion, Enfermedad enfermedad, String cientificname) {
+    public Planta(String nombre, String tipo, String descripcion, Enfermedad enfermedad, String tratamiento) {
         this.nombre = nombre;
         this.tipo = tipo;
         this.descripcion = descripcion;
         this.enfermedad = enfermedad;
-        this.cientificname = cientificname;
+        this.tratamiento = tratamiento;
     }
 
     public Enfermedad getEnfermedad() {
@@ -32,12 +32,12 @@ public class Planta {
         this.enfermedad = enfermedad;
     }
 
-    public String getCientificname() {
-        return cientificname;
+    public String getTratamiento() {
+        return tratamiento;
     }
 
-    public void setCientificname(String cientificname) {
-        this.cientificname = cientificname;
+    public void setTratamiento(String tratamiento) {
+        this.tratamiento = tratamiento;
     }
 
         public String getNombre () {
@@ -71,7 +71,7 @@ public class Planta {
                 ", tipo='" + tipo + '\'' +
                 ", descripcion='" + descripcion + '\'' +
                 ", enfermedad=" + enfermedad +
-                ", cientificname='" + cientificname + '\'' +
+                ", tratamiento='" + tratamiento + '\'' +
                 '}';
     }
 }
