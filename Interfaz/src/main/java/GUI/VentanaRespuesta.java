@@ -26,6 +26,7 @@ public class VentanaRespuesta extends JFrame implements ActionListener {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         pack();
         setVisible(true);
+        setLocationRelativeTo(null);
     }
 
     private void añadirButton() {

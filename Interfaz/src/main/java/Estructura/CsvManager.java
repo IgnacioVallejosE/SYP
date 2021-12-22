@@ -54,6 +54,7 @@ public class CsvManager {
             System.out.println("El archivo no existe");
             JOptionPane.showMessageDialog(null, "El archivo ingresado no existe");
             e.printStackTrace();
+            System.exit(0);
         }
         return contacts;
     }

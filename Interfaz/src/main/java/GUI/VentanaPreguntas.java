@@ -21,6 +21,7 @@ public class VentanaPreguntas extends JFrame implements ActionListener {
         pack();
         setVisible(true);
         añadirButton();
+        setLocationRelativeTo(null);
     }
 
     public void añadirButton() {

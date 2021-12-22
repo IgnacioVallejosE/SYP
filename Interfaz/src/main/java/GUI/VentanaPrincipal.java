@@ -28,6 +28,7 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
         AñadirButton();
         setVisible(true);
         setResizable(false);
+        setLocationRelativeTo(null);
     }
 
     public void AñadirButton() {
