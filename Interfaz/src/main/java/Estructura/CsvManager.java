@@ -71,7 +71,7 @@ public class CsvManager {
                 fields[0],
                 fields[1],
                 fields[2],
-                Plantas.Enfermedad.valueOf(fields[3]),
+                Enfermedad.valueOf(fields[3]),
                 fields[4]
         );
     }

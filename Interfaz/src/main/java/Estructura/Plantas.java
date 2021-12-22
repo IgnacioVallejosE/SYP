@@ -24,14 +24,6 @@ public class Plantas {
         this.cientificname = cientificname;
     }
 
-    public static enum Enfermedad{
-        mancha_negra,
-        hongo_roya,
-        mancha_amarilla,
-        mancha_blanca,
-        pulgones,
-    }
-
     public Enfermedad getEnfermedad() {
         return enfermedad;
     }
